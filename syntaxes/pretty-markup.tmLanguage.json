@@ -1,0 +1,55 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pretty Markup",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#namespace" },
+		{ "include": "#strings" },
+		{ "include": "#comment" },
+		{ "include": "#attribute" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "entity.name.tag",
+					"match": "\\b(a|address|article|aside|blockquote|button|caption|colgroup|datalist|dd|details|dialog|div|dl|dt|fieldset|figcaption|figure|form|header|hgroup|h[1-6]|label|legend|li|main|map|menu|meter|nav|ol|optgroup|option|output|p|pre|progress|section|select|slot|summary|table|tbody|td|template|textarea|tfoot|th|thead|tr|ul|canvas|link|input|javascript|script|audio|canvas|iframe|video|img|small|script)\\b"
+				}
+			]
+		},
+		"namespace": {
+			"patterns": [
+				{
+					"name": "entity.name.class",
+					"match": "\\b(html|head|body|main|aside|footer)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.pretty-markup",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pretty-markup",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"begin": "//",
+			"beginCaptures": { "0": { "name": "comment.line.double-slash" } },
+			"end": "\\n",
+			"name": "comment.line.double-slash"
+		},
+		"attribute": {
+			"patterns": [
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b((s(hape|cope|t(ep|art)|ize(s)?|p(ellcheck|an)|elected|lot|andbox|rc(set|doc|lang)?)|h(ttp-equiv|i(dden|gh)|e(ight|aders)|ref(lang)?)|n(o(nce|validate|module)|ame)|c(h(ecked|arset)|ite|o(nt(ent(editable)?|rols)|ords|l(s(pan)?|or))|lass|rossorigin)|t(ype(mustmatch)?|itle|a(rget|bindex)|ranslate)|i(s(map)?|n(tegrity|putmode)|tem(scope|type|id|prop|ref)|d)|op(timum|en)|d(i(sabled|r(name)?)|ownload|e(coding|f(er|ault))|at(etime|a)|raggable)|usemap|p(ing|oster|la(ysinline|ceholder)|attern|reload)|enctype|value|kind|for(m(novalidate|target|enctype|action|method)?)?|w(idth|rap)|on(click|mouseover|mouseleave|change|input)|l(ist|o(op|w)|a(ng|bel))|a(s(ync)?|c(ce(sskey|pt(-charset)?)|tion)|uto(c(omplete|apitalize)|play|focus)|l(t|low(usermedia|paymentrequest|fullscreen))|bbr)|r(ows(pan)?|e(versed|quired|ferrerpolicy|l|adonly))|m(in(length)?|u(ted|ltiple)|e(thod|dia)|a(nifest|x(length)?))|style)(?![\\w:-]))\\b"
+				}
+			]
+		}
+		},
+	"scopeName": "source.pretty-markup"
+}

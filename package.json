@@ -1,0 +1,55 @@
+{
+  "name": "pretty-markup-language-basics",
+  "displayName": "Pretty Markup Language Basics",
+  "description": "Provides syntax highlighting, snippets in Pretty Markup files & basic intellisense",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "main": "./out/extension.js",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pretty-markup",
+        "aliases": [
+          "Pretty Markup",
+          "pretty-markup"
+        ],
+        "extensions": [
+          ".pm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pretty-markup",
+        "scopeName": "source.pretty-markup",
+        "path": "./syntaxes/pretty-markup.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "pretty-markup",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "@types/vscode": "^1.73.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.0",
+    "@typescript-eslint/parser": "^7.14.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.5.2"
+  }
+}

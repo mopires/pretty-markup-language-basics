@@ -1,0 +1,125 @@
+{
+	"pretty-markup:doc": {
+		"scope": "pretty-markup",
+		"isFileTemplate": true,
+		"prefix": "html:doc",
+		"body": [
+			"html",
+			"head",
+			"\ttitle \"Pretty Markup file\" /title",
+			"\t// CSS styles", 
+			"\tstyle src=\"index.css\"",
+			"/head",
+			"body",
+			"\t$0",
+			"\t// Scripts",
+			"\tjavascript src=\"index.js\"",
+			"/body",
+			"/html"
+		],
+		"description": "pretty-markup Document",
+	},
+	"style": {
+		"scope": "pretty-markup",
+		"prefix": "style src=\"index.css\"",
+		"body": [
+				"style src=${1:index.css}"
+			],
+		"description":
+			"The style markup is an abstraction of <link href=\"...\" rel=\"...\n It Requires only the src of the stylesheet",
+	},
+	"main": {
+		"scope": "pretty-markup",
+		"prefix": "main",
+		"body": [
+			"main",
+			"\t$0",
+			"/main"
+		],
+	},
+	"div": {
+    "scope": "pretty-markup",
+    "prefix": "Div with content",
+    "body": [
+			"div class=\"${1:class}\" id=\"${2:identifier}\"",
+			"\t${3://content}",
+			"/div",
+		],
+	},
+	"p": {
+		"scope": "pretty-markup",
+		"prefix": "paragraph",
+		"body": [
+				"p", 
+				"\t\"${1:text}\"",
+				"/p"
+			],
+	},
+	"js": {
+		"scope": "pretty-markup",
+		"prefix": "javascript src=\"index.js\"",
+		"body": [
+				"javascript src=${1:Src}"
+			],
+		"description":
+			"The javascript markup is an abstraction of <script src=\"...\" type=\"... It Requires only the src of the JavaScript",
+	},
+	"table": {
+		"scope": "pretty-markup",
+		"prefix": "table",
+		"body": [
+			"table",
+			"\ttr",
+			"\tth",
+			"\t\ttd",
+			"\t\t\t\"Table headings 1\"",
+			"\t\t/td",
+			"\t\ttd",
+			"\t\t\t\"Table headings 2\"",
+			"\t\t/td",
+			"\t\ttd",
+			"\t\t\t\"Table headings 3\"",
+			"\t\t/td",
+			"\t/th",
+			"\t/tr",
+			"\ttr",
+			"\t\ttd",
+			"\t\t\t\"Table headings 1\"",
+			"\t\t/td",
+			"\t\ttd",
+			"\t\t\t\"Table headings 2\"",
+			"\t\t/td",
+			"\t\ttd",
+			"\t\t\t\"Table headings 3\"",
+			"\t\t/td",
+			"\t/tr",
+			"/table"
+		],
+		"description": "A table snippet with one row"
+	},
+	"button": {
+    "scope": "pretty-markup",
+    "prefix": "tag: button",
+    "body": [
+			"button"
+		],
+	},
+  "form": {
+    "scope": "pretty-markup",
+    "prefix": "form",
+    "body": [
+			"form action\"$0\"",
+			"\tlabel \"Name\" /label", 
+			"\tinput type=\"text\"",
+			"\tinput type=\"checkbox\" checked=\"false\"",
+			"\tbutton onclick=\"process()\" \"Subtmit\" /button",
+			"/form"
+		],
+		"description": "A basic form"
+	},
+  "a": {
+    "scope": "pretty-markup",
+    "prefix": "a anchor",
+    "body": ["a href=\"${1:href}\" \"$0\" /a"]
+	},
+}
