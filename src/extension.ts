@@ -2,10 +2,7 @@ import * as vscode from "vscode";
 import {Intellisense} from "./snippets/snippets";
 
 export function activate(context: vscode.ExtensionContext) {
-  vscode.window.showInformationMessage(Object.entries(Intellisense).length.toString());
   Object.entries(Intellisense).forEach((snippetName) => {
-    vscode.window.showInformationMessage(snippetName[1].prefix);
-    
     const completionItem = new vscode.CompletionItem(
       snippetName[1].prefix,
       snippetName[1].kind
