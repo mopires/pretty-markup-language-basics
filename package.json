@@ -3,6 +3,7 @@
   "displayName": "Pretty Markup Language Basics",
   "description": "Provides syntax highlighting, snippets in Pretty Markup files & basic intellisense",
   "version": "0.0.1",
+  "repository": "https://github.com/mopires/pretty-markup-language-basics",
   "engines": {
     "vscode": "^1.91.0"
   },
@@ -10,7 +11,18 @@
   "categories": [
     "Programming Languages"
   ],
+  "publisher": "mopires",
   "icon": "./assets/icon.png",
+  "bugs": "",
+  "contributors": [
+    "Matheus Pires"
+  ],
+  "author": "Matheus Pires",
+  "readme": "./README.md",
+  "maintainers": [
+    "Matheus Pires"
+  ],
+  "license": "MIT",
   "contributes": {
     "languages": [
       {
