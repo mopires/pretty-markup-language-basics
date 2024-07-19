@@ -1,9 +1,3 @@
-# Change Log
+# Released
 
-All notable changes to the "pretty-markup-language-basics" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+* 1.0.0 - Initial release of Pretty Markup Language Basic
