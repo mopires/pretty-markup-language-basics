@@ -5,11 +5,11 @@ This tool extends VS Code with support for the Pretty Markup preprecessor, and p
 ## Features
 ### 🤵🏻‍♂️ Snippets
 The snippets are helpful to get started with a new markup. 
-![Snippets video](https://github.com/mopires/pretty-markup-language-basics/assets/videos/snippets.mp4)
+![Snippets video](./assets/videos/snippets.gif)
 # 
 ### 🤵🏼‍♀️ Intellisense
 The intellisense brings good leads to understand how the markups are inputed in a document and help the developer.
-![Intellisense](https://github.com/mopires/pretty-markup-language-basics/assets/videos/intellisense.mp4)
+![Intellisense](./assets/videos/intellisense.gif)
 
 
 ## 🔧 Issues and improvements 
@@ -17,7 +17,8 @@ Report bugs or improvements at https://github.com/mopires/pretty-markup-language
 
 ## Release Notes
 
-### 1.0.0 - Initial release of Pretty Markup Language Basic
+### 0.0.1 - Initial release of Pretty Markup Language Basic
+### 0.0.2 - Fix gif in readme
 
 ## For more information
 

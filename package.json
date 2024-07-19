@@ -2,7 +2,7 @@
   "name": "pretty-markup-language-basics",
   "displayName": "Pretty Markup Language Basics",
   "description": "Provides syntax highlighting, snippets in Pretty Markup files & basic intellisense",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/mopires/pretty-markup-language-basics",
   "engines": {
     "vscode": "^1.91.0"
